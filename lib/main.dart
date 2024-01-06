@@ -18,19 +18,17 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: Container(
-        width: double.infinity,
-        height: 300,
-        color: Colors.redAccent,
-        alignment: Alignment.center,
-        child: AspectRatio(
-            aspectRatio: 16/9,
-            child: Container(
-              color: Colors.purpleAccent,
-            ),
+      body: Center(
+        child: FractionallySizedBox(
+          ///Width Default Size-1 (mean full)
+          ///0.7,0.5 means 70%/50% of the whole page..
+          widthFactor: 0.7,
+          heightFactor: 0.4,
+          child: Container(
+            color: Colors.redAccent,
+          ),
         ),
       ),
     );
   }
-  
 }
