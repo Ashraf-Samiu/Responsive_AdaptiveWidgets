@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_widgets/MediaQuery_Style.dart';
 
 void main(){
   runApp(MyApp());
@@ -15,20 +14,35 @@ class MyApp extends StatelessWidget{
 class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    var width= MediaQuery.of(context).size.width;
-    var height= MediaQuery.of(context).size.height;
-    var orientation= MediaQuery.of(context).orientation;
     return Scaffold(
       appBar: AppBar(
         title: Text("Home"),
       ),
       body: Column(
         children: [
-          Text("Screen Width: $width"),
-          Text("Screen Height: $height"),
-          Text("Screen Orientation: $orientation"),
-          Text("Hello Flutter! ",
-              style: HeadLine(context)
+          Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.red,
+              )
+          ),
+          Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.blue,
+              )
+          ),
+          Expanded(
+              flex: 3,
+              child: Container(
+                  color: Colors.deepOrange,
+              )
+          ),
+          Expanded(
+              flex: 4,
+              child: Container(
+                  color: Colors.purple,
+              )
           )
         ],
       ),
