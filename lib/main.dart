@@ -1,7 +1,36 @@
+import 'package:flutter/material.dart';
+
 void main(){
-  ///Responsive and Adaptive- Represent the Application in different sizes of Screens..
-  ///Example- TV,Desktop,Laptop,Phone,Tablet
-  ///Responsive- We Use Media Queries,Flexible Grid,Row,Column etc for that (One Template for all devices)
-  ///Adaptive- Using different components for different devices (Different Components for different devices)
-  ///Used Packages and Widgets- Aspect Ratio,Media Query,Expanded,Flexible,Fractionally Sized Box,Layout Builder,Responsive Grid etc..
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
+}
+class HomeScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: Container(
+        width: double.infinity,
+        height: 300,
+        color: Colors.redAccent,
+        alignment: Alignment.center,
+        child: AspectRatio(
+            aspectRatio: 16/9,
+            child: Container(
+              color: Colors.purpleAccent,
+            ),
+        ),
+      ),
+    );
+  }
+  
 }
