@@ -18,43 +18,24 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        ///scroll button will appear in the content
-        child: Column(
-          children: [
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.red,
-            ),
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.purple,
-            ),
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.green,
-            ),
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.black,
-            ),
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.grey,
-            ),
-            Container(
-              width: 300,
-              height: 200,
-              color: Colors.deepOrange,
-            ),
-          ],
-        ),
+      body: LayoutBuilder(
+          builder: (BuildContext context,
+              BoxConstraints constraints){
+              if(constraints.maxWidth>600){
+                return Container(
+                  width: 400,
+                  height: 400,
+                  color: Colors.amber,
+                );
+              }
+              else{
+                return Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.purple,
+                );
+              }
+          }
       ),
     );
   }
