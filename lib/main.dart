@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget{
         title: Text("Home"),
       ),
       body: LayoutBuilder(
+        ///part of Adaptive
           builder: (BuildContext context,
               BoxConstraints constraints){
               if(constraints.maxWidth>600){
