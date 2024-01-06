@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget{
       ),
       body: SingleChildScrollView(
         child: BootstrapContainer(
+          fluid: true,
           children: [
             BootstrapRow(children: [
               BootstrapCol(
