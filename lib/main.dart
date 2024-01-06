@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget{
         children: [
           Text("Screen Width: $width"),
           Text("Screen Height: $height"),
-          Text("Screen Orientaton: $orientation"),
+          Text("Screen Orientation: $orientation"),
           Text("Hello Flutter! ",
               style: HeadLine(context)
           )
