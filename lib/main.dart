@@ -20,12 +20,23 @@ class HomeScreen extends StatelessWidget{
       ),
       body: Center(
         ///we will have to use flutter performance tool to check sizedBox..
-        child: SizedBox(
-          height: 200,
-          width: 200,
-          child: FittedBox(
-              child: Text("Learn Everyday,Code Everyday,Finish what you've started!")
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 200,
+              width: 200,
+              child: Text("Learn Everyday,Code Everyday,Finish what you've started!"),
+            ),
+            SizedBox(
+              height: 200,
+              width: 200,
+              ///fitted box will fit the content in one line by smalling it..
+              child: FittedBox(
+                child: Text("Learn Everyday,Code Everyday,Finish what you've started!"),
+              ),
+            )
+          ],
         ),
       ),
     );
