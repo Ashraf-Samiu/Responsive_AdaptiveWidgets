@@ -19,14 +19,11 @@ class HomeScreen extends StatelessWidget{
         title: Text("Home"),
       ),
       body: Center(
-        child: FractionallySizedBox(
-          ///Width Default Size-1 (mean full)
-          ///0.7,0.5 means 70%/50% of the whole page..
-          widthFactor: 0.7,
-          heightFactor: 0.4,
-          child: Container(
-            color: Colors.redAccent,
-          ),
+        ///we will have to use flutter performance tool to check sizedBox..
+        child: SizedBox(
+          height: 200,
+          width: 200,
+          child: Text("Learn Everyday,Code Everyday,Finish what you've started!"),
         ),
       ),
     );
