@@ -19,13 +19,19 @@ class HomeScreen extends StatelessWidget{
         title: Text("Home"),
       ),
       body: Center(
-        child: FractionallySizedBox(
-          ///Width Default Size-1 (mean full)
-          ///0.7,0.5 means 70%/50% of the whole page..
-          widthFactor: 0.7,
-          heightFactor: 0.4,
-          child: Container(
-            color: Colors.redAccent,
+        child: Container(
+          width: 500,
+          height: 500,
+          color: Colors.greenAccent,
+          child: FractionallySizedBox(
+            ///Width Default Size-1 (mean full)
+            ///0.7,0.5 means 70%/50% of the whole page..
+            widthFactor: 0.7,
+            heightFactor: 0.8,
+            alignment: Alignment.center,
+            child: Container(
+              color: Colors.redAccent,
+            ),
           ),
         ),
       ),
