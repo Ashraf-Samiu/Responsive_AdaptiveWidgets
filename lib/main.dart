@@ -23,7 +23,9 @@ class HomeScreen extends StatelessWidget{
         child: SizedBox(
           height: 200,
           width: 200,
-          child: Text("Learn Everyday,Code Everyday,Finish what you've started!"),
+          child: FittedBox(
+              child: Text("Learn Everyday,Code Everyday,Finish what you've started!")
+          ),
         ),
       ),
     );
