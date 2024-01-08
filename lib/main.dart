@@ -1,17 +1,7 @@
-import 'package:flutter/foundation.dart';
-///kDebugMode,kReleaseMode are part of it..
 import 'package:flutter/material.dart';
-import 'package:device_preview/device_preview.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 void main(){
-  runApp(
-      DevicePreview(
-        ///we will disable it on production..(enabled: true=on/false=off)
-        enabled: kDebugMode,
-          ///If we use kDebugMode,The App will show devicePreview in the bottom..after releasing the app the option will be disappeared..
-          ///kReleaseMode is opposite of it's..
-          builder: (context){
-            return MyApp();
-      }));
+  runApp(MyApp());
 }
 class MyApp extends StatelessWidget{
   @override
@@ -28,6 +18,15 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home"),
       ),
+      ///Responsive Layout Builder
+      body: ResponsiveBuilder(
+          builder: (context,sizeInformation){
+            return Center(
+              child: Text(
+                sizeInformation.deviceScreenType.toString(),
+              ),
+            );
+          }),
     );
   }
 }
