@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 void main(){
   runApp(MyApp());
 }
@@ -18,15 +18,21 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home"),
       ),
-      ///Responsive Layout Builder
-      body: ResponsiveBuilder(
-          builder: (context,sizeInformation){
+      ///All packages have documentation with example code..
+      body: ResponsiveSizer(
+          builder: (context,orientation,deviceType){
+            print(deviceType);
             return Center(
               child: Text(
-                sizeInformation.deviceScreenType.toString(),
-              ),
-            );
-          }),
+                "Hello World!",
+                style: TextStyle(
+                  fontSize: 15.sp
+                  ///Sp Means the percentage pixel of any devices..it is independent widget..
+                ///Sh,Sw (Size height,Size width) is part of responsive builder..
+            ),
+          ),
+        );
+      }),
     );
   }
 }
