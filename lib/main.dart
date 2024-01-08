@@ -18,6 +18,8 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text("Home"),
       ),
+      ///Loose will take only the required space
+      ///Tight will take all the space that are available below..
       body: Row(
         children: [
           Flexible(
