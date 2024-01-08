@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart';///kDebugMode,kReleaseMode are part of it
+import 'package:flutter/foundation.dart';
+///kDebugMode,kReleaseMode are part of it..
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 void main(){
