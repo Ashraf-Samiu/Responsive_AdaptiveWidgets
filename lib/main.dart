@@ -26,27 +26,34 @@ class HomeScreen extends StatelessWidget{
             fit: FlexFit.tight,
               flex: 2,
               child: Container(
+                width: 100,
                 color: Colors.deepOrange,
-              )
-          ),
-          Flexible(
-            fit: FlexFit.loose,
-              flex: 1,
-              child: Container(
-                color: Colors.redAccent,
-              )
-          ),
-          Flexible(
-            fit: FlexFit.loose,
-              flex: 3,
-              child: Container(
-                color: Colors.blueAccent,
               )
           ),
           Flexible(
             fit: FlexFit.tight,
               flex: 2,
               child: Container(
+                width: 100,
+                color: Colors.redAccent,
+              )
+          ),
+          Flexible(
+            fit: FlexFit.tight,
+              flex: 3,
+              child: Container(
+                width: 100,
+                color: Colors.blueAccent,
+              )
+          ),
+          Flexible(
+            fit: FlexFit.loose,
+              ///loose will only use the space of given width and height..
+              ///But tight will take the whole space according to flex property's value..
+              ///Expanded is a result of FlexFit.tight..
+              flex: 2,
+              child: Container(
+                width: 100,
                 color: Colors.greenAccent,
               )
           ),
